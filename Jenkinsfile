@@ -2,10 +2,10 @@ pipeline {
   agent any
 
   environment {
-    IMAGE = 'yourdockerhubusername/logo-server'
+    IMAGE = 'hemanth173/logo-server'
     AWS_REGION = 'ap-south-1'
-    CLUSTER = 'your-ecs-cluster'
-    SERVICE = 'your-ecs-service'
+    CLUSTER = 'splendid-parrot-1g8vi2'
+    SERVICE = 'DevOps_Task-service-w43li486'
   }
 
   stages {
