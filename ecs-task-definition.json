@@ -1,0 +1,30 @@
+{
+  "family": "devops-task-family",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::339713114196:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::339713114196:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "devops-task-container",
+      "image": "yourdockerhubusername/devops-task:latest",
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/devops-task",
+          "awslogs-region": "ap-south-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}
