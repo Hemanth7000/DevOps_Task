@@ -39,6 +39,33 @@ DevOps_Task/
 
 ---
 
+## Prerequisites
+To automate the deployment of a Node.js application to AWS ECS Fargate using Jenkins on an EC2 instance, here are some prerequisites you'll typically need:
+
+1. **AWS Account**: You'll need an AWS account to create ECS Fargate clusters and manage other AWS resources.
+
+2. **EC2 Instance**: Set up an EC2 instance where Jenkins will run. This instance should have Java installed (needed for Jenkins) and access to AWS services via IAM roles.
+
+3. **Jenkins**: Install Jenkins on your EC2 instance. You can follow the official Jenkins installation guide for this or please refer to my previous article. click here
+
+4. **Node.js Application**: Have a Node.js application ready that you want to deploy.
+
+5. **Docker**: Your Node.js application should be Dockerized. This means creating a Dockerfile to package your Node.js app into a Docker image.
+
+6. **AWS ECS**: Understand the basics of ECS (Elastic Container Service) and Fargate, as you'll be deploying Docker containers to ECS Fargate.
+
+7. **IAM Role**: Create an IAM role with the necessary permissions for Jenkins to interact with AWS services like ECS.
+
+8. **AWS CLI**: Install AWS CLI on your Jenkins EC2 instance to interact with AWS services from Jenkins scripts or you can use EC2 connect session manager.
+
+9. **Jenkins Plugins**: Install necessary Jenkins plugins like AWS Pipeline Plugin, Docker Pipeline Plugin, etc., depending on your pipeline needs.
+
+10. **Pipeline Script**: Prepare a Jenkins pipeline script (usually written in Groovy) that defines the steps to build your Docker image, push it to a Docker registry (like ECR - Elastic Container Registry), and deploy it to ECS Fargate.
+
+These are the foundational prerequisites. Each step will involve detailed configuration and setup, but these points cover the essential groundwork for automating your Node.js application deployments using Jenkins and AWS ECS Fargate.
+
+---
+
 ## CI/CD Pipeline Setup Guide
 
 ---
