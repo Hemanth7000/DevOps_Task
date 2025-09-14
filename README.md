@@ -151,3 +151,12 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 # Viewing Logs & Metrics
 1. Go to AWS CloudWatch → Log Groups → /ecs/logo-server
 2. View CPU, memory, and network metrics under ECS → Cluster → Service → Metrics
+
+---
+
+## Troubleshooting
+
+1. **Webhook not triggering**: Check GitHub → Settings → Webhooks
+2. **Jenkins can't clone repo**: Add GitHub PAT as credentials
+3. **Docker push fails**: Verify DockerHub credentials in Jenkins
+4. **ECS task stuck**: Check IAM role and task definition logs
