@@ -2,6 +2,8 @@
 
 This project demonstrates a complete CI/CD pipeline for deploying a containerized Node.js application to AWS ECS using Jenkins, DockerHub, and CloudWatch logging. It automates the build, push, and deployment process with robust monitoring and role-based access.
 
+![CI/CD Pipeline](assets/developer.png)
+
 ---
 
 ## Tech Stack
